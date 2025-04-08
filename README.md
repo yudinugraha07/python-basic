@@ -11,66 +11,31 @@ This repo is for learning python for beginner.
 - Virtual environment (optional but recommended)
 - Required dependencies listed in `requirements.txt`
 
-## Check Python Installation
+## Virtual Environment
 
-To check if Python is already installed on your system, run the following command in your terminal:
-
-```bash
-python --version
-```
-
-or
+**Create Virtual Env**
 
 ```bash
-python3 --version
+python -m venv env
 ```
 
-If Python is installed, you will see the version number. If not, follow the instructions below to install Python.
+**Activate the virtual environment**
 
-## Install Python
+```bash
+source env/bin/activate
+```
 
-1. Visit the [official Python website](https://www.python.org/downloads/).
-2. Download the latest version compatible with your operating system.
-3. Follow the installation instructions provided for your platform:
-    - **Windows**: Run the installer and ensure you check the box to add Python to your PATH.
-    - **macOS**: Use the installer or install via Homebrew:
-      ```bash
-      brew install python
-      ```
-    - **Linux**: Use your package manager. For example, on Ubuntu:
-      ```bash
-      sudo apt update
-      sudo apt install python3
-      ```
+**Dectivate the virtual environment**
 
-## Manage Python Versions
+```bash
+deactivate
+```
 
-To manage multiple Python versions, you can use a version manager like `pyenv`:
+## Install Dependencies
 
-1. Install `pyenv`:
-    - **macOS/Linux**:
-      ```bash
-      curl https://pyenv.run | bash
-      ```
-    - **Windows**: Use [pyenv-win](https://github.com/pyenv-win/pyenv-win).
-
-2. Add `pyenv` to your shell configuration file (e.g., `.bashrc`, `.zshrc`):
-    ```bash
-    export PATH="$HOME/.pyenv/bin:$PATH"
-    eval "$(pyenv init --path)"
-    eval "$(pyenv virtualenv-init -)"
-    ```
-
-3. Restart your terminal and install a specific Python version:
-    ```bash
-    pyenv install 3.10.0
-    pyenv global 3.10.0
-    ```
-
-4. Verify the installed version:
-    ```bash
-    python --version
-    ```
+```bash
+pip install -r requirements.txt
+```
 
 ## Run the App
 
